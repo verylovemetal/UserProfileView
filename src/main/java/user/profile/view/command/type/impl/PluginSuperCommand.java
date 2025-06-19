@@ -5,7 +5,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.SimpleCommandMap;
 import org.jetbrains.annotations.NotNull;
-import user.profile.view.Main;
+import user.profile.view.ProfilePlugin;
 import user.profile.view.command.AbstractCommand;
 import user.profile.view.command.CommandController;
 import user.profile.view.command.type.ICommand;
@@ -19,14 +19,14 @@ import java.util.Optional;
 public abstract class PluginSuperCommand extends AbstractCommand {
 
     private final String commandName;
-    protected final Main plugin;
+    protected final ProfilePlugin plugin;
     private final ICommand iCommand;
     private final String[] commandAliases;
 
     @Getter
     private final List<PluginSubCommand> subCommands = new ArrayList<>();
 
-    public PluginSuperCommand(String commandName, Main plugin) {
+    public PluginSuperCommand(String commandName, ProfilePlugin plugin) {
         super(commandName, plugin);
 
         this.commandName = commandName;

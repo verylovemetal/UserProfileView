@@ -2,11 +2,9 @@ package user.profile.view.config;
 
 import lombok.Getter;
 import lombok.SneakyThrows;
-import org.bukkit.configuration.Configuration;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
-import org.yaml.snakeyaml.Yaml;
-import user.profile.view.Main;
+import user.profile.view.ProfilePlugin;
 import user.profile.view.config.provider.ConfigProviderRecord;
 
 import java.io.File;
@@ -34,13 +32,13 @@ public abstract class AbstractConfig {
 
     @SneakyThrows
     private File getFile(String path) {
-        File dataFolder = Main.getInstance().getDataFolder();
+        File dataFolder = ProfilePlugin.getInstance().getDataFolder();
         if (!dataFolder.exists()) dataFolder.mkdir();
 
         File file = new File(dataFolder, new File(path).getName());
 
         if (!file.exists()) {
-            InputStream inputStream = Main.getInstance().getResource(path);
+            InputStream inputStream = ProfilePlugin.getInstance().getResource(path);
             if (inputStream != null) {
                 Files.copy(inputStream, file.toPath());
             } else {

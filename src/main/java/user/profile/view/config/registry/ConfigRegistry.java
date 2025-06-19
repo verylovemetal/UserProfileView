@@ -1,7 +1,7 @@
 package user.profile.view.config.registry;
 
 import lombok.Getter;
-import user.profile.view.Main;
+import user.profile.view.ProfilePlugin;
 import user.profile.view.config.AbstractConfig;
 
 import java.util.HashMap;
@@ -16,7 +16,7 @@ public class ConfigRegistry {
     private final Map<Class<? extends AbstractConfig>, AbstractConfig> configs = new HashMap<>();
 
     public void registerDefaultConfigs() {
-        Main.getInstance()
+        ProfilePlugin.getInstance()
                 .getConfigurations()
                 .forEach(this::registerConfig);
     }

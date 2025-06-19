@@ -1,8 +1,7 @@
 package user.profile.view.database;
 
-import org.bukkit.Location;
 import org.jetbrains.annotations.Nullable;
-import user.profile.view.Main;
+import user.profile.view.ProfilePlugin;
 import user.profile.view.database.cache.CacheDataManager;
 import user.profile.view.database.data.ProfileData;
 
@@ -35,7 +34,7 @@ public abstract class AbstractDataManager extends CacheDataManager {
     }
 
     public void saveData(UUID key, ProfileData data) {
-        DataStorage.getInstance().save(Main.getInstance().getCollectionName(), key, data);
+        DataStorage.getInstance().save(ProfilePlugin.getInstance().getCollectionName(), key, data);
         cache.put(key, data);
     }
 
@@ -45,12 +44,12 @@ public abstract class AbstractDataManager extends CacheDataManager {
 
     public ProfileData getData(UUID key) {
         DataStorage storage = DataStorage.getInstance();
-        return storage.loadData(Main.getInstance().getCollectionName(), key);
+        return storage.loadData(ProfilePlugin.getInstance().getCollectionName(), key);
     }
 
     public ProfileData getDataByName(String name) {
         DataStorage storage = DataStorage.getInstance();
-        return storage.getDataByName(Main.getInstance().getCollectionName(), name);
+        return storage.getDataByName(ProfilePlugin.getInstance().getCollectionName(), name);
     }
 
     public boolean isPresent(UUID key) {
@@ -59,7 +58,7 @@ public abstract class AbstractDataManager extends CacheDataManager {
         }
 
         DataStorage storage = DataStorage.getInstance();
-        return storage.isPresent(Main.getInstance().getCollectionName(), key);
+        return storage.isPresent(ProfilePlugin.getInstance().getCollectionName(), key);
     }
 
     private ProfileData createDefaultData(UUID key, String playerName) {

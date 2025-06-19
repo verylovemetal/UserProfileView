@@ -1,9 +1,6 @@
 package user.profile.view.config.provider;
 
 import org.bukkit.configuration.Configuration;
-import org.jetbrains.annotations.Nullable;
-import org.jetbrains.annotations.UnknownNullability;
-import user.profile.view.Main;
 import user.profile.view.config.AbstractConfig;
 import user.profile.view.config.codec.CodecRegistry;
 import user.profile.view.config.codec.ICodec;

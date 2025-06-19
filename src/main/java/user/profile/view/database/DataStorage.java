@@ -5,7 +5,7 @@ import lombok.SneakyThrows;
 import org.jooq.DSLContext;
 import org.jooq.SQLDialect;
 import org.jooq.impl.DSL;
-import user.profile.view.Main;
+import user.profile.view.ProfilePlugin;
 import user.profile.view.database.data.ProfileData;
 
 import java.io.File;
@@ -21,7 +21,7 @@ public class DataStorage {
 
     @SneakyThrows
     public DataStorage() {
-        File databaseFile = new File(Main.getInstance().getDataFolder(), "database.db");
+        File databaseFile = new File(ProfilePlugin.getInstance().getDataFolder(), "database.db");
         String connectionURL = "jdbc:sqlite:" + databaseFile.getPath();
 
         Connection connection = DriverManager.getConnection(connectionURL);

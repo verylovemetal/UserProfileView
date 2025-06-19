@@ -19,10 +19,10 @@ import java.util.List;
 import java.util.concurrent.Executor;
 
 @Getter
-public class Main extends JavaPlugin {
+public class ProfilePlugin extends JavaPlugin {
 
     @Getter
-    private static Main instance;
+    private static ProfilePlugin instance;
 
     private final String collectionName = "users";
     private final Executor mainExecutor = Bukkit.getScheduler().getMainThreadExecutor(this);

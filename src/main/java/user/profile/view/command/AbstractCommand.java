@@ -3,13 +3,13 @@ package user.profile.view.command;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import user.profile.view.Main;
+import user.profile.view.ProfilePlugin;
 
 public abstract class AbstractCommand extends Command {
 
-    protected final Main plugin;
+    protected final ProfilePlugin plugin;
 
-    protected AbstractCommand(String commandName, Main plugin) {
+    protected AbstractCommand(String commandName, ProfilePlugin plugin) {
         super(commandName);
         this.plugin = plugin;
     }

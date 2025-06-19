@@ -2,7 +2,7 @@ package user.profile.view.command.impl;
 
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import user.profile.view.Main;
+import user.profile.view.ProfilePlugin;
 import user.profile.view.command.impl.sub.clear.DescriptionClearSub;
 import user.profile.view.command.impl.sub.clear.UrlClearSub;
 import user.profile.view.command.impl.sub.set.DescriptionSetSub;
@@ -20,7 +20,7 @@ import java.util.UUID;
 @ICommand(aliases = "")
 public class ProfileCommand extends PluginSuperCommand {
 
-    public ProfileCommand(Main plugin) {
+    public ProfileCommand(ProfilePlugin plugin) {
         super("profile", plugin);
         registerSubCommand(new DescriptionSetSub());
         registerSubCommand(new UrlSetSub());
@@ -56,7 +56,7 @@ public class ProfileCommand extends PluginSuperCommand {
             }
 
             sendInfoMessage(playerUUID, data);
-        }, Main.getInstance().getMainExecutor());
+        }, ProfilePlugin.getInstance().getMainExecutor());
     }
 
     private void sendInfoMessage(UUID senderUUID, ProfileData profileData) {
