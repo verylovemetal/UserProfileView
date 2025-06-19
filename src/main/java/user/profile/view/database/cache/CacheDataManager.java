@@ -8,11 +8,12 @@ import user.profile.view.database.data.ProfileData;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 
 public abstract class CacheDataManager extends DataManager {
 
-    protected final Map<UUID, ProfileData> cache = new HashMap<>();
+    protected final Map<UUID, ProfileData> cache = new ConcurrentHashMap<>();
 
     public ProfileData getCachedData(UUID playerUUID) {
         return cache.get(playerUUID);
