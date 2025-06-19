@@ -1,0 +1,50 @@
+menu:
+  info-menu:
+    title: "Информация"
+    info-item:
+      material: "NAME_TAG"
+      name: " <white>Профиль <gradient:#D2905A:#D7945E>%player-name% %online-mode%"
+      lore:
+        - ""
+        - " <color:#D2CF5A>✎</color> <white>Описание: %description%"
+        - " <color:#AED25A>⚡</color> <white>Ссылка: <gradient:#A0C647:#8FBF1E><click:open_url:'%url%'>%url%</click>"
+        - " <color:#54B0C8>⌚</color> <white>Первый вход: <color:#72C6E7>%date%"
+        - ""
+
+description:
+  length-limit: 50
+
+messages:
+  profile-command-usage:
+    - ""
+    - " <color:#D2905A>₪</color> <gradient:#D2905A:#D7945E>Использование <gray>(/profile)"
+    - ""
+    - " <gradient:#D2905A:#D7945E> ● /profile [ник-нэйм]</gradient> <white>- Увидеть информацию игрока"
+    - " <gradient:#D2905A:#D7945E> ● /profile description set [описание]</gradient> <white>- Установить своё описание <gray>[50 символов]"
+    - " <gradient:#D2905A:#D7945E> ● /profile url set [описание]</gradient> <white>- Установить свою ссылку"
+    - " <gradient:#D2905A:#D7945E> ● /profile description clear</gradient> <white>- Очистить своё описание"
+    - " <gradient:#D2905A:#D7945E> ● /profile url clear</gradient> <white>- Очистить свою ссылку"
+    - ""
+  player-not-found: "<gradient:#D2905A:#D7945E>ᴘʀᴏғɪʟᴇ <color:#80746B>●</color> <white>Данный игрок <gradient:#D2905A:#D7945E>не был</gradient> найден!"
+  description-length-limit: "<gradient:#D2905A:#D7945E>ᴘʀᴏғɪʟᴇ <color:#80746B>●</color> <white>Ваше <gradient:#D2905A:#D7945E>описание</gradient> содержит более <gradient:#D2905A:#D7945E>50 символов!"
+  description-invalid-characters: "<gradient:#D2905A:#D7945E>ᴘʀᴏғɪʟᴇ <color:#80746B>●</color> <white>Вы используете запрещенные символы!"
+  description-is-empty: "<gradient:#D2905A:#D7945E>ᴘʀᴏғɪʟᴇ <color:#80746B>●</color> <white>Ваше <gradient:#D2905A:#D7945E>описание</gradient> не может быть <gradient:#D2905A:#D7945E>пустым!"
+  url-is-empty: "<gradient:#D2905A:#D7945E>ᴘʀᴏғɪʟᴇ <color:#80746B>●</color> <white>Ваша <gradient:#D2905A:#D7945E>ссылка</gradient> не может быть <gradient:#D2905A:#D7945E>пуста!"
+  url-wrong-format: "<gradient:#D2905A:#D7945E>ᴘʀᴏғɪʟᴇ <color:#80746B>●</color> <white>Ваша <gradient:#D2905A:#D7945E>ссылка</gradient> не соответствует <gradient:#D2905A:#D7945E>формату!"
+  no-url: "<gradient:#D75252:#D43737>✘"
+  no-description: "<gradient:#D75252:#D43737>✘"
+  set-url: "<gradient:#D2905A:#D7945E>ᴘʀᴏғɪʟᴇ <color:#80746B>●</color> <white>Вы <gradient:#52D76B:#37D468>успешно</gradient> установили <gradient:#D2905A:#D7945E>новую ссылку</gradient> в свой профиль!"
+  clear-url: "<gradient:#D2905A:#D7945E>ᴘʀᴏғɪʟᴇ <color:#80746B>●</color> <white>Вы <gradient:#52D76B:#37D468>успешно</gradient> очистили <gradient:#D2905A:#D7945E>ссылку</gradient> из своего профиля!"
+  set-description: "<gradient:#D2905A:#D7945E>ᴘʀᴏғɪʟᴇ <color:#80746B>●</color> <white>Вы <gradient:#52D76B:#37D468>успешно</gradient> установили <gradient:#D2905A:#D7945E>новое описание</gradient> в свой профиль!"
+  clear-description: "<gradient:#D2905A:#D7945E>ᴘʀᴏғɪʟᴇ <color:#80746B>●</color> <white>Вы <gradient:#52D76B:#37D468>успешно</gradient> очистили <gradient:#D2905A:#D7945E>описание</gradient> из своего профиля!"
+  online-mode:
+    online: "<color:#3CF55E>●</color>"
+    offline: "<color:#F53C53>●</color>"
+  info-message:
+    - ""
+    - " <color:#D2905A>ℹ</color> <white>Профиль <gradient:#D2905A:#D7945E>%player-name% %online-mode%"
+    - ""
+    - " <color:#D2CF5A>✎</color> <white>Описание: %description%"
+    - " <color:#AED25A>⚡</color> <white>Ссылка: <gradient:#A0C647:#8FBF1E><click:open_url:'%url%'>%url%</click>"
+    - " <color:#54B0C8>⌚</color> <white>Первый вход: <color:#72C6E7>%date%"
+    - ""

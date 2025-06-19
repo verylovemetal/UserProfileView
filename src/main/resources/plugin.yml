@@ -1,0 +1,4 @@
+name: UserProfileView
+version: '${version}'
+main: user.profile.view.Main
+api-version: '1.21'
