@@ -19,20 +19,6 @@ public abstract class DataManager {
         }
     }
 
-    protected void lock(Runnable runnable) {
-        lock.lock();
-
-        try {
-            runnable.run();
-        } finally {
-            lock.unlock();
-        }
-    }
-
-    protected CompletableFuture<Void> async(Runnable runnable) {
-        return CompletableFuture.runAsync(runnable);
-    }
-
     protected <T> CompletableFuture<T> async(Supplier<T> supplier) {
         return CompletableFuture.supplyAsync(supplier);
     }

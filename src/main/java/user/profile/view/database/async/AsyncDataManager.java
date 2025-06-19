@@ -17,23 +17,7 @@ public class AsyncDataManager extends AbstractDataManager {
         return async(() -> updateData(key, consumer));
     }
 
-    public CompletableFuture<ProfileData> loadDataAsync(UUID key, String playerName) {
-        return async(() -> loadData(key, playerName));
-    }
-
-    public CompletableFuture<Void> saveDataAsync(UUID key, ProfileData profileData) {
-        return async(() -> saveData(key, profileData));
-    }
-
-    public CompletableFuture<ProfileData> getDataAsync(UUID key) {
-        return async(() -> getData(key));
-    }
-
     public CompletableFuture<ProfileData> getDataByNameAsync(String playerName) {
         return async(() -> getDataByName(playerName));
-    }
-
-    public CompletableFuture<Boolean> isPresentAsync(UUID key) {
-        return async(() -> isPresent(key));
     }
 }
